@@ -4,8 +4,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
  
-PATH = "C:\Program Files (x86)\chromedriver.exe"
-driver = webdriver.Chrome(PATH)
+
+driver = webdriver.Chrome()
 
 driver.get("https://youtube.com")
 
@@ -15,9 +15,8 @@ arat = input("Aratmak istediğiniz metni giriniz: ")
 search.send_keys(arat)
 search.send_keys(Keys.RETURN)
 
-print(driver.page_source)
+#print(driver.page_source)
 
 time.sleep(5)
 
 driver.quit()
-
